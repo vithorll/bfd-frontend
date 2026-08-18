@@ -1,0 +1,302 @@
+:root {
+    /* paleta de cores */
+    --text-color: #100f0f;
+    --background-color: #faf8f7;
+    --primary-color: #af5f57;
+    --secondary-color: #dc9a93;
+    --accent-color: #e07065;
+
+    /* fontes */
+    --main-font: 'Roboto Slab', serif;
+
+    /* espaçamentos */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 112px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--main-font);
+    font-size: var(--space-md);
+    color: var(--text-color);
+}
+
+/* --- Header Styles --- */
+header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    z-index: 1000;
+    position: fixed;
+    padding: var(--space-md);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+    padding: var(--space-sm);
+}
+
+header a {
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    width: fit-content;
+    padding: var(--space-xs);
+}
+
+header .menu a:hover {
+    border-bottom: 2px solid var(--text-color);
+}
+
+header img {
+    width: 40px;
+}
+
+header h1 {
+    padding: var(--space-md)
+}
+/* --- Header Styles --- */
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 50px;
+}
+
+main h2 {
+    padding: var(--space-md);
+}
+
+main p {
+    text-indent: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 100%;
+    margin-bottom: var(--space-sm);
+}
+
+/* --- Sobre Styles --- */
+#sobre {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: -1200px;
+}
+
+#sobre img {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    padding-top: 112px;
+}
+
+#sobre div {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+}
+/* --- Sobre Styles --- */
+
+/* --- Cardápio Styles --- */
+#cardapio {
+    width: 600px;
+}
+
+#cardapio h2 {
+    text-align: center;
+}
+
+#cardapio table {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+#cardapio tbody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+#cardapio .item {
+    width: 500px;
+    height: 150px;
+    display: grid;
+    background-color: var(--background-color);
+    border-radius: var(--space-sm);
+    grid-template-areas: 
+    "foto nome"
+    "foto descricao"
+    "foto preco";
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: auto 1fr auto;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+#cardapio .item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--space-sm);
+}
+
+#cardapio .item td:first-child { 
+    grid-area: foto;
+    margin: 0; 
+}
+
+#cardapio .item .nome { 
+    grid-area: nome;
+    padding: 10px;
+    padding-left: 15px;
+    font-weight: 700;
+}
+
+#cardapio .item .descricao { 
+    grid-area: descricao;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+#cardapio .item .preco { 
+    grid-area: preco;
+    padding: 10px;
+    padding-left: 15px;
+    font-weight: 700;
+}
+/* --- Cardápio Styles --- */
+
+/* --- Depoimentos Styles --- */
+#depoimentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: var(--space-xl);
+}
+
+#depoimentos ul {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+}
+
+#depoimentos li {
+    width: 100%;
+    border: 1px solid;
+    padding: 20px;
+}
+
+#depoimentos li:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+/* --- Depoimentos Styles --- */
+
+/* --- Reservas Styles --- */
+main #reservas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    padding: var(--space-xl);
+}
+
+#reservas form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--text-color);
+    padding: 20px;
+    gap: 20px;
+}
+
+#reservas div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+
+#reservas input {
+    height: 40px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+}
+
+#reservas button {
+    width: 100%;
+    height: 40px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 1px solid var(--text-color);
+    font-weight: 700;
+}
+
+#reservas button:hover {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+/* --- Reservas Styles --- */
+
+/* --- Footer Style --- */
+footer {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* --- Footer Style --- */

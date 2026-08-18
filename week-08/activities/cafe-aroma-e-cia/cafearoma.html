@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aroma & Cia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilo.css">
+  </head>
+
+  <body>
+    <header> 
+      <nav>
+        <ul>
+          <li>
+            <a href="cafearoma.html">
+              <img src="./img/logo.png" alt="Logo do Café Aroma & Cia">
+              <h1>Café Aroma &amp; Cia</h1>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#reservas">Reservas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="sobre">
+        <img src="./img/local.png" alt="Interior aconchegante do Café Aroma & Cia, com mesas de madeira e plantas">
+        <div>
+          <h2>Sobre o café</h2>
+          <p>
+            Desde 2015, o Aroma &amp; Cia serve café especial torrado artesanalmente,
+            em um ambiente pensado para quem gosta de trabalhar, ler ou apenas
+            conversar com calma. Nossos grãos vêm de pequenos produtores parceiros,
+            e cada xícara é preparada na hora.
+          </p>
+          <p>
+            Funcionamos de terça a domingo, das 8h às 19h, com opções de café da
+            manhã, brunch e uma seleção de doces e salgados feitos no local.
+          </p>
+        </div>
+      </section>
+
+      <section id="cardapio">
+        <h2>Cardápio</h2>
+        <table>
+          <caption>Itens em destaque — cardápio completo disponível no balcão</caption>
+          <tbody>
+            <tr class="item">
+                <td><img src="./img/espresso.avif"></td>
+                <td class="nome">Espresso</td>
+                <td class="descricao">Café espresso extraído na hora, blend da casa</td>
+                <td class="preco">R$ 6,00</td>
+            </tr>
+            <tr class="item">
+              <td><img src="./img/cappuccino.jpg"></td>
+              <td class="nome">Cappuccino Aroma</td>
+              <td class="descricao">Espresso, leite vaporizado e canela em pó</td>
+              <td class="preco">R$ 9,50</td>
+            </tr>
+            <tr class="item">
+              <td><img src="./img/prenca.webp"></td>
+              <td class="nome">Prensa Francesa</td>
+              <td class="descricao">Café coado na prensa francesa, servido em bule individual</td>
+              <td class="preco">R$ 12,00</td>
+            </tr>
+            <tr class="item">
+              <td><img src="./img/torrada-de-abacate.jpg"></td>
+              <td class="nome">Torrada de Abacate</td>
+              <td class="descricao">Pão artesanal, abacate amassado, ovo pochê e especiarias</td>
+              <td class="preco">R$ 18,00</td>
+            </tr>
+            <tr class="item">
+              <td><img src="./img/bolo-de-fuba.webp"></td>
+              <td class="nome">Bolo de Fubá</td>
+              <td class="descricao">Fatia de bolo de fubá cremoso com goiabada</td>
+              <td class="preco">R$ 10,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="depoimentos">
+        <ul>
+          <h2>O que dizem nossos clientes?</h2>
+          <li>
+            <p>&ldquo;O melhor cappuccino da região, e o ambiente é super tranquilo para trabalhar.&rdquo;</p>
+            <p><strong>— Marina T.</strong></p>
+          </li>
+          <li>
+            <p>&ldquo;Virei cliente fiel só pela torrada de abacate. Recomendo demais!&rdquo;</p>
+            <p><strong>— Rafael S.</strong></p>
+          </li>
+          <li>
+            <p>&ldquo;Atendimento excelente e o café é sempre fresquinho.&rdquo;</p>
+            <p><strong>— Beatriz L.</strong></p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="reservas">
+        <form action="#" method="post">
+          <h2>Reserve sua mesa!</h2>
+          <div class="input-field">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div class="input-field">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div>
+            <label for="data">Data da reserva *</label>
+            <input type="date" id="data" name="data" required>
+          </div>
+
+          <div class="input-field">
+            <label for="pessoas">Número de pessoas *</label>
+            <input type="number" id="pessoas" name="pessoas" min="1" max="12" required>
+          </div>
+
+          <button type="submit">Confirmar reserva</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Café Aroma &amp; Cia — Rua das Flores, 245, Centro</p>
+      <p>Telefone: (51) 0000-0000 · contato@aromaecia.exemplo</p>
+    </footer>
+  </body>
+</html>
