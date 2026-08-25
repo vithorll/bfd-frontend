@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>@keyframes — pulsar e fade-in</title>
+<style>
+  :root{
+    --bg:#0F2C5A; --panel:#1A3F7F; --code:#081D3D;
+    --cyan:#6BD6FA; --teal:#52E8CC; --yellow:#FFD166; --rose:#F4869A;
+    --white:#FFFFFF; --grey:#C9D6E8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--white);
+    font-family: Calibri, "Segoe UI", sans-serif;
+    padding:32px 40px 60px;
+  }
+  h1{font-family: Cambria, Georgia, serif; font-size:28px; margin:0 0 6px;}
+  h2{font-family: Cambria, Georgia, serif; font-size:18px; color:var(--cyan); margin:32px 0 10px;}
+  .sub{color:var(--grey); font-size:15px; margin-bottom:20px; max-width:800px;}
+  .codebox{
+    background:var(--code); border-radius:10px; padding:16px 18px;
+    font-family:"Courier New", monospace; font-size:13.5px; line-height:1.7;
+    white-space:pre; overflow-x:auto; margin-bottom:20px; max-width:520px;
+  }
+  button.replay{
+    background: var(--panel); color: var(--white); border:none;
+    padding: 8px 16px; border-radius: 8px; font-family:Calibri, sans-serif;
+    font-size: 13px; cursor:pointer; margin-bottom: 20px;
+  }
+  button.replay:hover{ background: var(--cyan); color: var(--bg); }
+
+  /* ============================================
+     EXEMPLO A: animação infinita (pulsar)
+     ============================================ */
+  @keyframes pulsar {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+  .notificacao {
+    display: inline-block;
+    background: var(--rose);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 20px;
+    animation: pulsar 1.5s ease-in-out infinite;
+  }
+
+  /* ============================================
+     EXEMPLO B: animação única (fade-in)
+     ============================================ */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .card-fadein {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 320px;
+    color: var(--grey);
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  footer{margin-top:34px; color:var(--grey); font-size:12.5px;}
+</style>
+</head>
+<body>
+
+  <h1>@keyframes: pulsar (infinito) e fade-in (único)</h1>
+  <div class="sub"></div>
+
+  <h2>Animação infinita — pulsar</h2>
+  <div class="codebox">@keyframes pulsar {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.notificacao {
+  animation: pulsar 1.5s ease-in-out infinite;
+}</div>
+  <div class="notificacao">3 novas mensagens</div>
+
+  <h2>Animação única — fade-in</h2>
+  <div class="codebox">@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { animation: fadeIn 0.6s ease-out; }</div>
+  <button class="replay" onclick="repetir()">↻ Repetir animação</button>
+  <div class="card-fadein" id="cardFade">
+    Este card aparece com fade-in assim que a página carrega. Clique em "Repetir animação" para ver de novo.
+  </div>
+
+  <footer></footer>
+
+  <script>
+    function repetir() {
+      const el = document.getElementById('cardFade');
+      el.style.animation = 'none';
+      void el.offsetWidth; // força o navegador a "esquecer" a animação anterior
+      el.style.animation = 'fadeIn 0.6s ease-out';
+    }
+  </script>
+</body>
+</html>

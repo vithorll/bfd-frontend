@@ -144,15 +144,15 @@ main p {
 }
 
 #cardapio tbody {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: var(--space-md);
+    overflow-x: auto;
 }
 
 #cardapio .item {
-    width: 500px;
+    min-width: 500px;
     height: 150px;
     display: grid;
     background-color: var(--background-color);
