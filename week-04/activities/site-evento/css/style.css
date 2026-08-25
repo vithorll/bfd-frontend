@@ -1,0 +1,49 @@
+html {
+    background-color: #fbfbfe;
+    color: #050315;
+    font-family: 'Inter', sans-serif;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    background-color: #dedcff;
+    width: 125%;
+    cursor: pointer;
+}
+
+a {
+    color: #050315;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+}
+
+header {
+    border-bottom: 1px solid #dedcff;
+}
+
+.cursos-table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#programacao-table {
+    border-collapse: collapse;
+}
+
+#programacao-table th, #programacao-table td {
+    border: 1px solid #050315;
+    padding: 8px;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+}

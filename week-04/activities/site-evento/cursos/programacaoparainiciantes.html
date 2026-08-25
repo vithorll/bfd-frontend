@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <title>Programação para Iniciantes</title>
+    </head>
+
+    <header>
+        <h1 align="center"><a href="../index.html">Worke</a></h1>
+        
+        <ul>
+            <li><strong><a href="../pages/eventos.html">Eventos</a></strong></li>
+            <li><strong><a href="../pages/workshops.html">Workshops</a></strong></li>
+            <li><strong><a href="../pages/cursos.html">Cursos</a></strong></li>
+        </ul>
+    </header>
+
+    <body>
+        <section id="sobre">
+            <table align="center" style="padding-top: 25px;">
+                <thead>
+                    <th><img src="../img/programacaoparainiciantes.png" alt="Capa do Curso de Programação para Iniciantes" width=50%></th>
+                </thead>
+                
+                <tbody>
+                    <td>
+                        <h1>Programação para Iniciantes</h1>
+                        <p><small>Por Thiago Costa</small></p>
+                        <p>Dê os primeiros passos no mundo da programação aprendendo os principais conceitos de lógica, algoritmos e desenvolvimento de software.<p>
+                    </td>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="inscricoes">
+            <form align="center">
+                <h3>Formulário de Inscrição</h3>
+
+                <label for="nome">Nome completo: *</label>
+                <br>
+                <input type="text" id="nome" name="nome" required>
+                <br>
+                <br>
+
+                <label for="data">Data de nascimento: *</label>
+                <br>
+                <input type="date" id="data" name="data" required>
+                <br>
+                <br>
+
+                <label for="cpf">CPF: *</label>
+                <br>
+                <input type="number" id="cpf" name="cpf" required>
+                <br>
+                <br>
+
+                <label for="email">E-mail:*</label>
+                <br>
+                <input type="text" id="email" name="email" required>
+                <br>
+                <br>
+
+                <label for="telefone">Telefone/Celular: *</label>
+                <br>
+                <input type="number" id="telefone" name="telefone" required>
+                <br>
+                <br>
+                
+                <button type="submit" style="max-width: 100px; padding: 10px;"><strong>Confirmar Inscrição</strong></button>
+                <button type="reset" style="max-width: 100px; padding: 10px;"><strong>Limpar Formulário</strong></button>
+            </form>
+        </section>
+    </body>
+</html>
