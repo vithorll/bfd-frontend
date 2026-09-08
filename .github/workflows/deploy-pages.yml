@@ -28,6 +28,8 @@ jobs:
         run: |
           mkdir -p _site
 
+          cp index.html _site/
+
           cp -r projects/cafe-aroma-e-cia _site/
           cp -r projects/site-evento _site/
           cp -r projects/pixelforge _site/
