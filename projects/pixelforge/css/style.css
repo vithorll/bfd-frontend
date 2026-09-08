@@ -21,7 +21,11 @@ header, main, footer {
     max-width: 1440px;
     width: 1440px;
     color: white;
-    background-color: #68579d;
+}
+
+.hero {
+    width: 1440px;
+    height: 1024px;
 }
 
 header {
@@ -48,4 +52,16 @@ header ul {
     list-style: none;
     padding-right: 40px;
     gap: 40px;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    max-width: 1440px;
+    max-height: 1024px;    
+}
+
+main {
+    background-color: blue;
 }
